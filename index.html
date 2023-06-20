@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ropa Femenina</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-xxx" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark  fixed-top">
+        <img class="navbar-brand" src="/imgVania/logo/20220323_232616_0000.png" width="100rem"  ></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link " href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-shopping-cart"></i> Carrito
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <h1>Bienvenido a nuestra tienda de ropa femenina</h1>
+        <p>¡Descubre nuestras últimas tendencias y encuentra el estilo perfecto para ti!</p>
+        <a href="#" class="btn btn-primary btn-lg">Ver productos</a>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Sección 1</h2>
+            </div>
+            <div class="col-md-6">
+                <h2>Abrigos y Chaquetas</h2>
+                <div style="position: relative; display: inline-block;">
+                    <img id="imageElement" src="/imgVania/chaqueta/1.jpg" width="500rem" height="500rem">
+                    <button id="prevButton" class="btn-pink-uno">Anterior</button>
+                    <button id="nextButton" class="btn-pink-dos">Siguiente</button>
+                  </div>
+            </div>
+          
+          
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Todos los derechos reservados &copy; 2023</p>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-secondary">Contacto</button>
+                    <button class="btn btn-secondary">Términos y condiciones</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+<script>
+    var esteDato = 1;
+    var imageElement = document.getElementById("imageElement");
+    var prevButton = document.getElementById("prevButton");
+    var nextButton = document.getElementById("nextButton");
+  
+    function changeImage() {
+      imageElement.src = "/imgVania/chaqueta/" + esteDato + ".jpg";
+    }
+  
+    function goToPreviousImage() {
+      esteDato--;
+      if (esteDato < 1) {
+        esteDato = 20;
+      }
+      changeImage();
+    }
+  
+    function goToNextImage() {
+      esteDato++;
+      if (esteDato > 20) {
+        esteDato = 1;
+      }
+      changeImage();
+    }
+  
+    prevButton.addEventListener("click", goToPreviousImage);
+    nextButton.addEventListener("click", goToNextImage);
+  </script>

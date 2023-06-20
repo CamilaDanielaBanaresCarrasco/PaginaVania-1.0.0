@@ -1,0 +1,41 @@
+/* Estilos personalizados */
+body {
+  padding-top: 60px;
+}
+.jumbotron {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 2rem;
+}
+.navbar {
+  background-color: #f8f9fa;
+}
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.position-relative {
+    position: relative;
+  }
+  
+
+
+  .btn-pink-uno {
+    background-color: pink;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    opacity: 10%;
+  }
+
+  .btn-pink-dos {
+    background-color: pink;
+    position: absolute;
+    top: 50%;
+    left: 83%;
+    transform: translate(-50%, -50%);
+    opacity: 10%;
+  }
